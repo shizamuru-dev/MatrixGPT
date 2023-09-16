@@ -1,3 +1,4 @@
 g4f~=0.0.2.9
 simplematrixbotlib~=2.10.0
 nest-asyncio
+matrix-nio[e2e]
