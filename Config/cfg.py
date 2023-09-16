@@ -1,4 +1,4 @@
-botID = "chatgpt-bot"
-botPassword = "Very secret password :)"
-homeServer = "https://matrix.example.com"
+botID = "chatgpt-bot" #Bot account username
+botPassword = "Very secret password :)" #Bot account password
+homeServer = "https://matrix.example.com" #z
 PREFIX = '!'
