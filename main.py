@@ -20,7 +20,7 @@ bot = botlib.Bot(creds,config)
 def add_json_room(room_id, gpt, user):
     storage = open('Storage/data.json', 'r')
     data = json.load(storage)
-    modify = data | {f"{room_id}": {"dialog": f"запрос:{user} ответ:{gpt}", "cout": 0}}
+    modify = data | {f"{room_id}": {"dialog": f"promt:{user} answer:{gpt}", "cout": 0}}
     json_object = json.dumps(modify, indent=4)
     storage.close()
     with open("Storage/data.json", "w") as outfile:
@@ -42,11 +42,11 @@ def modify_json_room(room_id, gpt, user):
     storage = open('Storage/data.json', 'r')
     data = json.load(storage)
     if data[room_id]['cout'] > 20:
-        data[room_id]['dialog'] = f" запрос: {user} ответ: {gpt}"
+        data[room_id]['dialog'] = f" promt: {user} answer: {gpt}"
         data[room_id]['cout'] = 0
     else:
         dialog_old = data[room_id]['dialog']
-        data[room_id]['dialog'] = dialog_old + f" запрос: {user} ответ: {gpt}"
+        data[room_id]['dialog'] = dialog_old + f" promt: {user} answer: {gpt}"
         cout_old = data[room_id]['cout']
         data[room_id]['cout'] = cout_old + 1
     modify = data
