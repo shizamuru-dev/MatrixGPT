@@ -9,6 +9,7 @@ A little bit about functionality:
  - [x] 📝 Short-term memory ( 20 messages )
  - [x] 🧹 Forced memory cleanup
  - [x] 💸 Free api for working with chatgpt
+ - [x] 🔁 It is possible to change the provider by the user
  - [ ] 🖲️Using PostgreSQL as storage
  - [ ] There could be your suggestion here...
 
